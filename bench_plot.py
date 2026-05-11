@@ -120,13 +120,9 @@ def print_table(results):
             print("  MEMORY BANDWIDTH")
             print("-" * 72)
             for level in ["L1", "L2", "DRAM"]:
-            # Normalize label
-            if level == "DRAM":
-                label = "DRAM"
-            else:
-                label = level
                 if level in bws:
-                    print(f"  {level:>4s} cache:    {bws[level]:>6.1f} GB/s")
+                    label = "DRAM" if level == "DRAM" else level
+                    print(f"  {label:>4s} bandwidth:    {bws[level]:>6.1f} GB/s")
             print()
 
 
