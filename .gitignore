@@ -1,0 +1,12 @@
+# Build artifacts
+bench_hpc
+bench_hpc_standalone
+*.o
+
+# Results (raw benchmark data, machine-specific)
+results/
+*.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
